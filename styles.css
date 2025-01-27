@@ -9,64 +9,55 @@ body {
     font-family: Arial, sans-serif;
     line-height: 1.6;
     background-color: #f9f9f9;
-    padding: 0 15%; /* 左右に10%の余白を追加 */
+    padding: 0 15%;
 }
 
 /* ヘッダーのスタイル */
 header {
     position: relative;
     width: 100%;
-    height: 400px; /* 高さを700pxに固定 */
-    margin-bottom: 20px; /* ヘッダー下に余白を追加 */
-    overflow: hidden; /* 子要素がはみ出さないように設定 */
+    height: 400px;
+    margin-bottom: 20px;
+    overflow: hidden;
     display: flex;
-    justify-content: center; /* 画像を中央に配置 */
+    justify-content: center;
     align-items: center;
-    background-color: #f9f9f9; /* 背景色を追加（任意） */
+    background-color: #f9f9f9;
 }
 
 .header-image {
-    max-width: 100%; /* 横幅を親要素の幅に収める */
-    max-height: 100%; /* 高さを親要素の高さに収める */
-    object-fit: contain; /* 縦横比を保ちながら画像全体を表示 */
+    max-width: 100%;
+    max-height: 100%;
+    object-fit: contain;
     display: block;
-    margin: 0 auto; /* 中央に配置 */
+    margin: 0 auto;
 }
 
 /* メインコンテンツのレイアウト */
 main {
-    margin-top: 0;
-    padding: 20px;
-    background-color: #fff;
-    display: flex; /* 横並びのレイアウト */
+    display: flex;
     justify-content: space-between;
+    gap: 20px;
 }
 
-/* 左カラム */
+/* カラムのスタイル */
+.left-column, .center-column, .right-column {
+    background-color: #ffffff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
 .left-column {
     width: 30%;
-    background-color: #ffffff;
-    padding: 20px;
-    border-radius: 8px;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
 
-/* 中央カラム */
 .center-column {
     width: 40%;
-    background-color: #ffffff;
-    padding: 20px;
-    border-radius: 8px;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
 
-/* 右カラム */
 .right-column {
     width: 30%;
-    background-color: #ffffff;
-    padding: 20px;
-    border-radius: 8px;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
 
 /* フッター */
@@ -106,4 +97,20 @@ a {
 
 a:hover {
     text-decoration: underline;
+}
+
+/* レスポンシブ対応 */
+@media screen and (max-width: 768px) {
+    body {
+        padding: 0 5%;
+    }
+
+    main {
+        flex-direction: column;
+    }
+
+    .left-column, .center-column, .right-column {
+        width: 100%;
+        margin-bottom: 20px;
+    }
 }
