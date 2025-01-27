@@ -1,4 +1,4 @@
-## Hi there 👋
+## こちらは某生誕イベントの企画用サイトです。本人にはばらさないでね♡
 
 <!--
 **maetan2025/maetan2025** is a ✨ _special_ ✨ repository because its `README.md` (this file) appears on your GitHub profile.
