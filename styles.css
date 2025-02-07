@@ -16,7 +16,7 @@ body {
 header {
     position: relative;
     width: 100%;
-    height: 400px;
+    height: calc(100vw * 3 / 14); /* 14:3 の比率で高さを設定 */
     margin-bottom: 20px;
     overflow: hidden;
     display: flex;
@@ -26,12 +26,18 @@ header {
 }
 
 .header-image {
-    max-width: 100%;
-    max-height: 100%;
-    object-fit: contain;
-    display: block;
-    margin: 0 auto;
+    width: 100%;
+    height: 100%;
+    object-fit: contain; /* PCでは画像全体を表示 */
 }
+
+/* スマホ用調整 */
+@media screen and (max-width: 768px) {
+    .header-image {
+        object-fit: cover; /* スマホでは余白なくフィット */
+    }
+}
+
 
 /* メインコンテンツのレイアウト */
 main {
